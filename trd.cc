@@ -204,7 +204,7 @@ main(int argc, char* argv[])
     ApplicationContainer apps;
 
     InetSocketAddress rmt(csmaInterfaces.GetAddress(nCsma), port);
-    rmt.SetTos(0xb8);
+    
     AddressValue remoteAddress(rmt);
     onoff.SetAttribute("Remote", remoteAddress);
     apps.Add(onoff.Install(wifiStaNodes.Get(nWifi-1)));
